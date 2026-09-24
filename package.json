@@ -1,0 +1,21 @@
+{
+  "name": "crawlcove-export-spec",
+  "version": "1.0.0",
+  "description": "JSON Schema + CSV column reference for Crawl Cove's SEO crawl export format, with a real sample export and a validator script.",
+  "private": true,
+  "scripts": {
+    "validate": "node scripts/validate.js",
+    "test": "node scripts/validate.js"
+  },
+  "keywords": ["seo", "crawler", "json-schema", "export", "crawl-cove"],
+  "author": "Crawl Cove",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CrawlCove/crawlcove-export-spec.git"
+  },
+  "devDependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1"
+  }
+}

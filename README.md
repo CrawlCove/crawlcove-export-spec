@@ -1,0 +1,45 @@
+# crawlcove-export-spec
+
+The JSON Schema and CSV column reference for [Crawl Cove](https://crawlcove.com)'s SEO crawl export — validate, script against, or build integrations on top of a Crawl Cove crawl export without reverse-engineering it.
+
+## What's here
+
+- **[`schema/crawl-export.schema.json`](schema/crawl-export.schema.json)** — a JSON Schema (2020-12) for the full-crawl JSON export the desktop app produces from its Reports page.
+- **[`docs/csv-columns.md`](docs/csv-columns.md)** — the column reference for the equivalent CSV export, including exactly how it differs from JSON (booleans, nulls, formula-injection escaping).
+- **[`docs/versioning.md`](docs/versioning.md)** — how the `schemaVersion` field changes, and what counts as a breaking change.
+- **[`examples/sample-crawl-export.json`](examples/sample-crawl-export.json)** — a real export, produced by the app's own export code against a small seeded crawl, not hand-written JSON.
+- **[`scripts/validate.js`](scripts/validate.js)** — a small Ajv-based validator you can point at your own export.
+
+## Install & validate
+
+```sh
+git clone https://github.com/CrawlCove/crawlcove-export-spec.git
+cd crawlcove-export-spec
+npm install
+npm run validate -- path/to/your-export.json   # or omit the path to check the bundled sample
+```
+
+## Using the schema in your own tools
+
+```js
+const Ajv = require('ajv')
+const addFormats = require('ajv-formats')
+const schema = require('crawlcove-export-spec/schema/crawl-export.schema.json')
+
+const ajv = new Ajv()
+addFormats(ajv)
+const validate = ajv.compile(schema)
+validate(myExport) // false + validate.errors on mismatch
+```
+
+## Works with CrawlCove
+
+This is the export format produced by [Crawl Cove](https://crawlcove.com/?utm_source=github&utm_medium=crawlcove-export-spec), a desktop SEO crawler for Windows and Mac. Run a crawl, export the Reports page to JSON or CSV, and validate it here — or build against the schema directly if you're consuming exports programmatically.
+
+## Related tools
+
+- [crawlcove-connector](https://github.com/CrawlCove/crawl-cove-connector) — WordPress plugin that applies Crawl Cove's approved fixes to Yoast, Rank Math, SEOPress, or AIOSEO.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
