@@ -41,6 +41,7 @@ This is the export format produced by [Crawl Cove](https://crawlcove.com/?utm_so
 - [crawlcove-mcp](https://github.com/CrawlCove/crawlcove-mcp) — MCP server that gives Claude, Cursor and other AI assistants the crawl data: crawl a site, list issues, find broken links.
 - [crawlcove-cli](https://github.com/CrawlCove/crawlcove-cli) — command line SEO crawler for scripts and CI; its per-page output uses this spec's field names where it checks the same thing.
 - [crawlcove-connector](https://github.com/CrawlCove/crawl-cove-connector) — WordPress plugin that applies Crawl Cove's approved fixes to Yoast, Rank Math, SEOPress, or AIOSEO.
+- [crawlcove-redirect-chain-checker](https://github.com/CrawlCove/crawlcove-redirect-chain-checker) — follow every hop of a URL’s redirects; flags chains, loops, HTTPS downgrades and meta refreshes.
 
 ## License
 
