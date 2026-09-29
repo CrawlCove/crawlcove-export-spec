@@ -40,6 +40,7 @@ This repo has its own page on crawlcove.com: [Crawl Cove export spec](https://cr
 
 ## Related tools
 
+- [crawlcove-hreflang-checker](https://github.com/CrawlCove/crawlcove-hreflang-checker) — check a page's or a sitemap's hreflang tags: codes, self-reference, x-default and return tags.
 - [crawlcove-mcp](https://github.com/CrawlCove/crawlcove-mcp) — MCP server that gives Claude, Cursor and other AI assistants the crawl data: crawl a site, list issues, find broken links.
 - [crawlcove-cli](https://github.com/CrawlCove/crawlcove-cli) — command line SEO crawler for scripts and CI; its per-page output uses this spec's field names where it checks the same thing.
 - [crawlcove-connector](https://github.com/CrawlCove/crawl-cove-connector) — WordPress plugin that applies Crawl Cove's approved fixes to Yoast, Rank Math, SEOPress, or AIOSEO.
