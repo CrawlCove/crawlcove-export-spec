@@ -38,6 +38,7 @@ This is the export format produced by [Crawl Cove](https://crawlcove.com/?utm_so
 
 ## Related tools
 
+- [crawlcove-cli](https://github.com/CrawlCove/crawlcove-cli) — command line SEO crawler for scripts and CI; its per-page output uses this spec's field names where it checks the same thing.
 - [crawlcove-connector](https://github.com/CrawlCove/crawl-cove-connector) — WordPress plugin that applies Crawl Cove's approved fixes to Yoast, Rank Math, SEOPress, or AIOSEO.
 
 ## License
