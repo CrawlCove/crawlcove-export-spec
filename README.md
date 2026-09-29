@@ -36,6 +36,8 @@ validate(myExport) // false + validate.errors on mismatch
 
 This is the export format produced by [Crawl Cove](https://crawlcove.com/?utm_source=github&utm_medium=crawlcove-export-spec), a desktop SEO crawler for Windows and Mac. Run a crawl, export the Reports page to JSON or CSV, and validate it here — or build against the schema directly if you're consuming exports programmatically.
 
+This repo has its own page on crawlcove.com: [Crawl Cove export spec](https://crawlcove.com/open-source/crawlcove-export-spec?utm_source=github&utm_medium=crawlcove-export-spec), with the post on the crawl export format at [https://crawlcove.com/blog/seo-crawl-export-format](https://crawlcove.com/blog/seo-crawl-export-format?utm_source=github&utm_medium=crawlcove-export-spec).
+
 ## Related tools
 
 - [crawlcove-mcp](https://github.com/CrawlCove/crawlcove-mcp) — MCP server that gives Claude, Cursor and other AI assistants the crawl data: crawl a site, list issues, find broken links.
